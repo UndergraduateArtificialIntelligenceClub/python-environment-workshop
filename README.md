@@ -4,9 +4,7 @@ files for the workshop
 ## Plan for workshop
 1. Explain Env
     Paul
-2. How-to w/ Pyenv
-    Slides || patat
-3. Install Miniconda
+2. Install Miniconda
     Terminal or from Website
 4. Git clone (Activity)
     Understand the effects a virtual environment
