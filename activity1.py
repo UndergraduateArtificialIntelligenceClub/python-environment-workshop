@@ -20,9 +20,22 @@ def main():
     stocks['Date'] = stocks['Date'].apply(lambda x: datetime.strftime(datetime.strptime(x, '%m/%d/%Y'), '%b %d %Y'))
     stocks = stocks.rename(columns={' Close/Last': 'Close/Last', ' Open': 'Open', ' High': 'High', ' Low': 'Low'})
 
-    # sns.lineplot(x='Date', y=' High', data=stocks)
+    # Basic Plot
+    basicPlot(stocks)
+
+    coolPlot(stocks)
+
+    plt.show()
+
+# Plots a basic plot that is
+# not nice to look at
+def basicPlot(stocks):
     plt.plot(stocks['Date'], stocks['High'])
 
+
+# Plots a nice looking plot that 
+# is far better to look at
+def coolPlot(stocks):
     fig = plt.figure()
 
     ax = fig.add_subplot(111)
@@ -41,7 +54,6 @@ def main():
     ax.yaxis.tick_left()
     ax.xaxis.tick_bottom()
 
-    plt.show()
 
 if __name__ == "__main__":
     main()
