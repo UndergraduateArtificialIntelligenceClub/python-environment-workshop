@@ -1,4 +1,3 @@
-import seaborn as sns
 from plots import Plot
 import pandas as pd
 import io
@@ -6,6 +5,8 @@ import requests
 from datetime import datetime
 
 def main():
+
+    plotter = Plot()
 
     # Read in data
     url='https://www.nasdaq.com/api/v1/historical/SBUX/stocks/2016-01-28/2020-02-28'
@@ -22,8 +23,6 @@ def main():
                                     ' Open': 'Open', 
                                     ' High': 'High', 
                                     ' Low': 'Low'})
-
-    plotter = Plot()
 
     # plotter.basicPlot(stocks, 'Date', 'High')
     plotter.coolPlot(stocks, 'Date', 'High', 'Starbucks Stocks over Time')

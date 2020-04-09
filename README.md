@@ -14,3 +14,7 @@ files for the workshop
     Use some packages in the environment to build something
     idk what
 
+## Videos
+Video 1: Explain Env, Install Miniconda, miniconda guide
+Video 2: 
+Video 3:
